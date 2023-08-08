@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+  }
+  
+  .sun {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 0, 0.8);
+  }
+  
+  .planet {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .mercury {
+    background-color: #C0C0C0;
+    animation-name: orbit-mercury;
+  }
+  
+  .venus {
+    background-color: #FFD700;
+    animation-name: orbit-venus;
+  }
+  
+  .earth {
+    background-color: #007FFF;
+    animation-name: orbit-earth;
+  }
+  
+  .mars {
+    background-color: #FF4500;
+    animation-name: orbit-mars;
+  }
+  
+  /* Add more planet-specific CSS as needed */
+  
+  @keyframes orbit-mercury {
+    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-venus {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-earth {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-mars {
+    from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+  }
+  
+  /* Add more planet-specific orbit animations as needed */</style>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sun"></div>
+  <div class="planet mercury"></div>
+  <div class="planet venus"></div>
+  <div class="planet earth"></div>
+  <div class="planet mars"></div>
+  <!-- Add more planets as needed -->
+</body>
+</html>
